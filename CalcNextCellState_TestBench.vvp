@@ -1,0 +1,255 @@
+#! /opt/homebrew/Cellar/icarus-verilog/12.0/bin/vvp
+:ivl_version "12.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 9;
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/system.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/vhdl_sys.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/vhdl_textio.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/v2005_math.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/va_math.vpi";
+S_0x147617280 .scope module, "CalcNextCellState_TestBench" "CalcNextCellState_TestBench" 2 4;
+ .timescale -9 -9;
+v0x1476323a0_0 .net "NEXT_STATE", 0 0, L_0x147634910;  1 drivers
+v0x147632430_0 .var "RULE", 7 0;
+v0x1476324c0_0 .var "STATE", 2 0;
+S_0x147607430 .scope module, "c" "CalcNextCellState" 2 8, 3 3 0, S_0x147617280;
+ .timescale -9 -9;
+    .port_info 0 /INPUT 8 "rule";
+    .port_info 1 /INPUT 3 "current_state";
+    .port_info 2 /OUTPUT 1 "next_state";
+v0x147631c10_0 .net "current_state", 2 0, v0x1476324c0_0;  1 drivers
+v0x147631cd0_0 .net "m1_out", 0 0, L_0x1476327c0;  1 drivers
+v0x147631db0_0 .net "m2_out", 0 0, L_0x147632dc0;  1 drivers
+v0x147631e80_0 .net "m3_out", 0 0, L_0x1476333b0;  1 drivers
+v0x147631f50_0 .net "m4_out", 0 0, L_0x1476339c0;  1 drivers
+v0x147632060_0 .net "m5_out", 0 0, L_0x147634080;  1 drivers
+v0x147632130_0 .net "m6_out", 0 0, L_0x1476344d0;  1 drivers
+v0x147632200_0 .net "next_state", 0 0, L_0x147634910;  alias, 1 drivers
+v0x147632290_0 .net "rule", 7 0, v0x147632430_0;  1 drivers
+L_0x1476328d0 .part v0x147632430_0, 7, 1;
+L_0x1476329f0 .part v0x147632430_0, 6, 1;
+L_0x147632ad0 .part v0x1476324c0_0, 0, 1;
+L_0x147632ed0 .part v0x147632430_0, 5, 1;
+L_0x147633030 .part v0x147632430_0, 4, 1;
+L_0x147633100 .part v0x1476324c0_0, 0, 1;
+L_0x1476334c0 .part v0x147632430_0, 3, 1;
+L_0x1476335e0 .part v0x147632430_0, 2, 1;
+L_0x1476336c0 .part v0x1476324c0_0, 0, 1;
+L_0x147633ad0 .part v0x147632430_0, 1, 1;
+L_0x147633cb0 .part v0x147632430_0, 0, 1;
+L_0x147633d90 .part v0x1476324c0_0, 0, 1;
+L_0x147634170 .part v0x1476324c0_0, 1, 1;
+L_0x1476345c0 .part v0x1476324c0_0, 1, 1;
+L_0x147634a20 .part v0x1476324c0_0, 2, 1;
+S_0x1476075a0 .scope module, "m1" "TwoToOneMux" 3 9, 4 1 0, S_0x147607430;
+ .timescale -9 -9;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /INPUT 1 "b";
+    .port_info 2 /INPUT 1 "s";
+    .port_info 3 /OUTPUT 1 "out";
+L_0x147632550 .functor AND 1, L_0x1476328d0, L_0x147632ad0, C4<1>, C4<1>;
+L_0x147632600 .functor NOT 1, L_0x147632ad0, C4<0>, C4<0>, C4<0>;
+L_0x1476326d0 .functor AND 1, L_0x1476329f0, L_0x147632600, C4<1>, C4<1>;
+L_0x1476327c0 .functor OR 1, L_0x147632550, L_0x1476326d0, C4<0>, C4<0>;
+v0x14760ac30_0 .net *"_ivl_0", 0 0, L_0x147632550;  1 drivers
+v0x14762eb90_0 .net *"_ivl_2", 0 0, L_0x147632600;  1 drivers
+v0x14762ec40_0 .net *"_ivl_4", 0 0, L_0x1476326d0;  1 drivers
+v0x14762ed00_0 .net "a", 0 0, L_0x1476328d0;  1 drivers
+v0x14762eda0_0 .net "b", 0 0, L_0x1476329f0;  1 drivers
+v0x14762ee80_0 .net "out", 0 0, L_0x1476327c0;  alias, 1 drivers
+v0x14762ef20_0 .net "s", 0 0, L_0x147632ad0;  1 drivers
+S_0x14762f000 .scope module, "m2" "TwoToOneMux" 3 12, 4 1 0, S_0x147607430;
+ .timescale -9 -9;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /INPUT 1 "b";
+    .port_info 2 /INPUT 1 "s";
+    .port_info 3 /OUTPUT 1 "out";
+L_0x147632bb0 .functor AND 1, L_0x147632ed0, L_0x147633100, C4<1>, C4<1>;
+L_0x147632c20 .functor NOT 1, L_0x147633100, C4<0>, C4<0>, C4<0>;
+L_0x147632cd0 .functor AND 1, L_0x147633030, L_0x147632c20, C4<1>, C4<1>;
+L_0x147632dc0 .functor OR 1, L_0x147632bb0, L_0x147632cd0, C4<0>, C4<0>;
+v0x14762f230_0 .net *"_ivl_0", 0 0, L_0x147632bb0;  1 drivers
+v0x14762f2e0_0 .net *"_ivl_2", 0 0, L_0x147632c20;  1 drivers
+v0x14762f390_0 .net *"_ivl_4", 0 0, L_0x147632cd0;  1 drivers
+v0x14762f450_0 .net "a", 0 0, L_0x147632ed0;  1 drivers
+v0x14762f4f0_0 .net "b", 0 0, L_0x147633030;  1 drivers
+v0x14762f5d0_0 .net "out", 0 0, L_0x147632dc0;  alias, 1 drivers
+v0x14762f670_0 .net "s", 0 0, L_0x147633100;  1 drivers
+S_0x14762f750 .scope module, "m3" "TwoToOneMux" 3 15, 4 1 0, S_0x147607430;
+ .timescale -9 -9;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /INPUT 1 "b";
+    .port_info 2 /INPUT 1 "s";
+    .port_info 3 /OUTPUT 1 "out";
+L_0x1476331a0 .functor AND 1, L_0x1476334c0, L_0x1476336c0, C4<1>, C4<1>;
+L_0x147633210 .functor NOT 1, L_0x1476336c0, C4<0>, C4<0>, C4<0>;
+L_0x1476332c0 .functor AND 1, L_0x1476335e0, L_0x147633210, C4<1>, C4<1>;
+L_0x1476333b0 .functor OR 1, L_0x1476331a0, L_0x1476332c0, C4<0>, C4<0>;
+v0x14762f990_0 .net *"_ivl_0", 0 0, L_0x1476331a0;  1 drivers
+v0x14762fa40_0 .net *"_ivl_2", 0 0, L_0x147633210;  1 drivers
+v0x14762faf0_0 .net *"_ivl_4", 0 0, L_0x1476332c0;  1 drivers
+v0x14762fbb0_0 .net "a", 0 0, L_0x1476334c0;  1 drivers
+v0x14762fc50_0 .net "b", 0 0, L_0x1476335e0;  1 drivers
+v0x14762fd30_0 .net "out", 0 0, L_0x1476333b0;  alias, 1 drivers
+v0x14762fdd0_0 .net "s", 0 0, L_0x1476336c0;  1 drivers
+S_0x14762feb0 .scope module, "m4" "TwoToOneMux" 3 18, 4 1 0, S_0x147607430;
+ .timescale -9 -9;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /INPUT 1 "b";
+    .port_info 2 /INPUT 1 "s";
+    .port_info 3 /OUTPUT 1 "out";
+L_0x147633830 .functor AND 1, L_0x147633ad0, L_0x147633d90, C4<1>, C4<1>;
+L_0x1476338a0 .functor NOT 1, L_0x147633d90, C4<0>, C4<0>, C4<0>;
+L_0x147633910 .functor AND 1, L_0x147633cb0, L_0x1476338a0, C4<1>, C4<1>;
+L_0x1476339c0 .functor OR 1, L_0x147633830, L_0x147633910, C4<0>, C4<0>;
+v0x1476300d0_0 .net *"_ivl_0", 0 0, L_0x147633830;  1 drivers
+v0x147630190_0 .net *"_ivl_2", 0 0, L_0x1476338a0;  1 drivers
+v0x147630240_0 .net *"_ivl_4", 0 0, L_0x147633910;  1 drivers
+v0x147630300_0 .net "a", 0 0, L_0x147633ad0;  1 drivers
+v0x1476303a0_0 .net "b", 0 0, L_0x147633cb0;  1 drivers
+v0x147630480_0 .net "out", 0 0, L_0x1476339c0;  alias, 1 drivers
+v0x147630520_0 .net "s", 0 0, L_0x147633d90;  1 drivers
+S_0x147630600 .scope module, "m5" "TwoToOneMux" 3 21, 4 1 0, S_0x147607430;
+ .timescale -9 -9;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /INPUT 1 "b";
+    .port_info 2 /INPUT 1 "s";
+    .port_info 3 /OUTPUT 1 "out";
+L_0x147633e30 .functor AND 1, L_0x1476327c0, L_0x147634170, C4<1>, C4<1>;
+L_0x147633f20 .functor NOT 1, L_0x147634170, C4<0>, C4<0>, C4<0>;
+L_0x147633f90 .functor AND 1, L_0x147632dc0, L_0x147633f20, C4<1>, C4<1>;
+L_0x147634080 .functor OR 1, L_0x147633e30, L_0x147633f90, C4<0>, C4<0>;
+v0x147630860_0 .net *"_ivl_0", 0 0, L_0x147633e30;  1 drivers
+v0x147630900_0 .net *"_ivl_2", 0 0, L_0x147633f20;  1 drivers
+v0x1476309b0_0 .net *"_ivl_4", 0 0, L_0x147633f90;  1 drivers
+v0x147630a70_0 .net "a", 0 0, L_0x1476327c0;  alias, 1 drivers
+v0x147630b20_0 .net "b", 0 0, L_0x147632dc0;  alias, 1 drivers
+v0x147630bf0_0 .net "out", 0 0, L_0x147634080;  alias, 1 drivers
+v0x147630c80_0 .net "s", 0 0, L_0x147634170;  1 drivers
+S_0x147630d70 .scope module, "m6" "TwoToOneMux" 3 24, 4 1 0, S_0x147607430;
+ .timescale -9 -9;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /INPUT 1 "b";
+    .port_info 2 /INPUT 1 "s";
+    .port_info 3 /OUTPUT 1 "out";
+L_0x147634280 .functor AND 1, L_0x1476333b0, L_0x1476345c0, C4<1>, C4<1>;
+L_0x147634370 .functor NOT 1, L_0x1476345c0, C4<0>, C4<0>, C4<0>;
+L_0x1476343e0 .functor AND 1, L_0x1476339c0, L_0x147634370, C4<1>, C4<1>;
+L_0x1476344d0 .functor OR 1, L_0x147634280, L_0x1476343e0, C4<0>, C4<0>;
+v0x147630f90_0 .net *"_ivl_0", 0 0, L_0x147634280;  1 drivers
+v0x147631050_0 .net *"_ivl_2", 0 0, L_0x147634370;  1 drivers
+v0x147631100_0 .net *"_ivl_4", 0 0, L_0x1476343e0;  1 drivers
+v0x1476311c0_0 .net "a", 0 0, L_0x1476333b0;  alias, 1 drivers
+v0x147631270_0 .net "b", 0 0, L_0x1476339c0;  alias, 1 drivers
+v0x147631340_0 .net "out", 0 0, L_0x1476344d0;  alias, 1 drivers
+v0x1476313d0_0 .net "s", 0 0, L_0x1476345c0;  1 drivers
+S_0x1476314c0 .scope module, "m7" "TwoToOneMux" 3 26, 4 1 0, S_0x147607430;
+ .timescale -9 -9;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /INPUT 1 "b";
+    .port_info 2 /INPUT 1 "s";
+    .port_info 3 /OUTPUT 1 "out";
+L_0x147634660 .functor AND 1, L_0x147634080, L_0x147634a20, C4<1>, C4<1>;
+L_0x147634770 .functor NOT 1, L_0x147634a20, C4<0>, C4<0>, C4<0>;
+L_0x147634820 .functor AND 1, L_0x1476344d0, L_0x147634770, C4<1>, C4<1>;
+L_0x147634910 .functor OR 1, L_0x147634660, L_0x147634820, C4<0>, C4<0>;
+v0x1476316e0_0 .net *"_ivl_0", 0 0, L_0x147634660;  1 drivers
+v0x1476317a0_0 .net *"_ivl_2", 0 0, L_0x147634770;  1 drivers
+v0x147631850_0 .net *"_ivl_4", 0 0, L_0x147634820;  1 drivers
+v0x147631910_0 .net "a", 0 0, L_0x147634080;  alias, 1 drivers
+v0x1476319c0_0 .net "b", 0 0, L_0x1476344d0;  alias, 1 drivers
+v0x147631a90_0 .net "out", 0 0, L_0x147634910;  alias, 1 drivers
+v0x147631b20_0 .net "s", 0 0, L_0x147634a20;  1 drivers
+    .scope S_0x147617280;
+T_0 ;
+    %vpi_call 2 11 "$dumpfile", "./Waveforms/CalcNextCellState_TestBench.vcd" {0 0 0};
+    %vpi_call 2 12 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x147617280 {0 0 0};
+    %pushi/vec4 110, 0, 8;
+    %assign/vec4 v0x147632430_0, 0;
+    %pushi/vec4 7, 0, 3;
+    %assign/vec4 v0x1476324c0_0, 0;
+    %delay 5, 0;
+    %pushi/vec4 110, 0, 8;
+    %assign/vec4 v0x147632430_0, 0;
+    %pushi/vec4 6, 0, 3;
+    %assign/vec4 v0x1476324c0_0, 0;
+    %delay 5, 0;
+    %pushi/vec4 110, 0, 8;
+    %assign/vec4 v0x147632430_0, 0;
+    %pushi/vec4 5, 0, 3;
+    %assign/vec4 v0x1476324c0_0, 0;
+    %delay 5, 0;
+    %pushi/vec4 110, 0, 8;
+    %assign/vec4 v0x147632430_0, 0;
+    %pushi/vec4 4, 0, 3;
+    %assign/vec4 v0x1476324c0_0, 0;
+    %delay 5, 0;
+    %pushi/vec4 110, 0, 8;
+    %assign/vec4 v0x147632430_0, 0;
+    %pushi/vec4 3, 0, 3;
+    %assign/vec4 v0x1476324c0_0, 0;
+    %delay 5, 0;
+    %pushi/vec4 110, 0, 8;
+    %assign/vec4 v0x147632430_0, 0;
+    %pushi/vec4 2, 0, 3;
+    %assign/vec4 v0x1476324c0_0, 0;
+    %delay 5, 0;
+    %pushi/vec4 110, 0, 8;
+    %assign/vec4 v0x147632430_0, 0;
+    %pushi/vec4 1, 0, 3;
+    %assign/vec4 v0x1476324c0_0, 0;
+    %delay 5, 0;
+    %pushi/vec4 110, 0, 8;
+    %assign/vec4 v0x147632430_0, 0;
+    %pushi/vec4 0, 0, 3;
+    %assign/vec4 v0x1476324c0_0, 0;
+    %delay 5, 0;
+    %pushi/vec4 90, 0, 8;
+    %assign/vec4 v0x147632430_0, 0;
+    %pushi/vec4 7, 0, 3;
+    %assign/vec4 v0x1476324c0_0, 0;
+    %delay 5, 0;
+    %pushi/vec4 90, 0, 8;
+    %assign/vec4 v0x147632430_0, 0;
+    %pushi/vec4 6, 0, 3;
+    %assign/vec4 v0x1476324c0_0, 0;
+    %delay 5, 0;
+    %pushi/vec4 90, 0, 8;
+    %assign/vec4 v0x147632430_0, 0;
+    %pushi/vec4 5, 0, 3;
+    %assign/vec4 v0x1476324c0_0, 0;
+    %delay 5, 0;
+    %pushi/vec4 90, 0, 8;
+    %assign/vec4 v0x147632430_0, 0;
+    %pushi/vec4 4, 0, 3;
+    %assign/vec4 v0x1476324c0_0, 0;
+    %delay 5, 0;
+    %pushi/vec4 90, 0, 8;
+    %assign/vec4 v0x147632430_0, 0;
+    %pushi/vec4 3, 0, 3;
+    %assign/vec4 v0x1476324c0_0, 0;
+    %delay 5, 0;
+    %pushi/vec4 90, 0, 8;
+    %assign/vec4 v0x147632430_0, 0;
+    %pushi/vec4 2, 0, 3;
+    %assign/vec4 v0x1476324c0_0, 0;
+    %delay 5, 0;
+    %pushi/vec4 90, 0, 8;
+    %assign/vec4 v0x147632430_0, 0;
+    %pushi/vec4 1, 0, 3;
+    %assign/vec4 v0x1476324c0_0, 0;
+    %delay 5, 0;
+    %pushi/vec4 90, 0, 8;
+    %assign/vec4 v0x147632430_0, 0;
+    %pushi/vec4 0, 0, 3;
+    %assign/vec4 v0x1476324c0_0, 0;
+    %delay 5, 0;
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 5;
+    "N/A";
+    "<interactive>";
+    "CalcNextCellState_TestBench.v";
+    "./CalcNextCellState.v";
+    "./TwoToOneMux.v";

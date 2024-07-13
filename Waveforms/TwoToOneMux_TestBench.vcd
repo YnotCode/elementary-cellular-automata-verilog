@@ -1,0 +1,54 @@
+$date
+	Sun Jul  7 21:35:19 2024
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module TwoToOneMux_TestBench $end
+$var wire 1 ! cout $end
+$var reg 1 " A $end
+$var reg 1 # B $end
+$var reg 1 $ S $end
+$scope module f $end
+$var wire 1 " a $end
+$var wire 1 # b $end
+$var wire 1 ! out $end
+$var wire 1 $ s $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+0$
+0#
+0"
+0!
+$end
+#5
+1$
+#10
+1!
+0$
+1#
+#15
+0!
+1$
+#20
+0$
+0#
+1"
+#25
+1!
+1$
+#30
+0$
+1#
+#35
+1$
+#40
